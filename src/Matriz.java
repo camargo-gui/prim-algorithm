@@ -44,6 +44,12 @@ public class Matriz {
             sb.append(String.format("%-10c %-10c %-10d\n", from, to, matriz[i][parent[i]]));
         }
 
+        int total = 0;
+        for (int i = 1; i < n; i++) {
+            total += matriz[i][parent[i]];
+        }
+        sb.append(String.format("Peso total: %d\n", total));
+
         return sb.toString();
     }
     
